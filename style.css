@@ -98,6 +98,7 @@ li {
   padding: 1.25rem;
 }
 
+/* Menu */
 nav {
   padding-top: 4.375rem;
 }
@@ -114,28 +115,58 @@ li {
   padding-bottom: 1rem;
 }
 
+/* Menu links */
 .features > a,
 .company > a {
   display: inline-block;
   padding-bottom: 1.5rem;
 }
 
-.icons li {
+/* Aligning features tabs icons and links */
+.features-tabs li {
   display: flex;
   gap: 15px;
 }
 
+/* Correcting features icons */
 ul img {
   align-self: center;
 }
 
+/* Spacing */
 .features div,
 .company div {
   display: flex;
   gap: 1rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1;
 }
 
+/* Spacing only in active state, so there are no extra spaces in inactive state */
+.features-tabs li:nth-child(1),
+.company-tabs li:nth-child(1) {
+  padding-top: 1.5rem;
+}
+
+/* Styles for JS to make tabs open and close + arrows rotation */
+.features-tabs,
+.company-tabs {
+  display: none;
+}
+
+.features-tabs-open {
+  display: block;
+}
+
+.company-tabs-open {
+  display: block;
+}
+
+.arrow-features-active,
+.arrow-company-active {
+  transform: rotate(180deg);
+}
+
+/* Styling login and register buttons */
 .form {
   text-align: center;
 }
