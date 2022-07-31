@@ -1,3 +1,5 @@
+const overlay = document.querySelector(".overlay");
+
 // Menu variables
 const menu = document.querySelector(".menu");
 const open = document.querySelector(".open");
@@ -14,21 +16,25 @@ const companyTabs = document.querySelector(".company-tabs");
 const arrowFeatures = document.querySelector(".arrow-features");
 const arrowCompany = document.querySelector(".arrow-company");
 
-// Opening and closing menu
+// Opening menu
 function openMenu() {
-  menu.style.display = "block";
-  body.classList.add("toggle");
+  menu.classList.add("menu-active");
+  overlay.classList.add("overlay-active");
 }
-
-function closeMenu() {
-  menu.style.display = "none";
-  body.classList.remove("toggle");
-}
-
 open.addEventListener("click", openMenu);
+
+// Closing menu + cloing all the other elements
+function closeMenu() {
+  menu.classList.remove("menu-active");
+  body.classList.remove("toggle");
+  featuresTabs.classList.remove("features-tabs-open");
+  arrowFeatures.classList.remove("arrow-features-active");
+  companyTabs.classList.remove("company-tabs-open");
+  arrowCompany.classList.remove("arrow-company-active");
+  overlay.classList.remove("overlay-active");
+}
 close.addEventListener("click", closeMenu);
 
-let toggle = false;
 // Opening and closing menu tabs and rotating arrows
 function openFeatures() {
   featuresTabs.classList.toggle("features-tabs-open");
