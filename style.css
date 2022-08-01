@@ -61,7 +61,7 @@ img {
 }
 
 .background-image {
-  background-image: url(/images/image-hero-mobile.png);
+  background-image: url(./images/image-hero-mobile.png);
   background-size: 100%;
   width: 100%;
   padding-top: 75.2%;
@@ -392,7 +392,7 @@ ul img {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     order: 2;
-    background-image: url(/images//image-hero-desktop.png);
+    background-image: url(./images//image-hero-desktop.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
