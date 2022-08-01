@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [View codes](https://github.com/jesuisbienbien/intro-section-with-dropdown-navigation-main)
-- Live Site URL: [View Live site](https://jesuisbienbien.github.io/intro-section-with-dropdown-navigation-main/)
+- Solution URL: [View codes]()
+- Live Site URL: [View Live site]()
 
 ## My process
 
