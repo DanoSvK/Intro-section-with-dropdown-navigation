@@ -1,3 +1,5 @@
+// Variables
+// Overlay variable
 const overlay = document.querySelector(".overlay");
 
 // Menu variables
@@ -37,15 +39,29 @@ close.addEventListener("click", closeMenu);
 
 // Opening and closing menu tabs and rotating arrows
 function openFeatures() {
-  featuresTabs.classList.toggle("features-tabs-open");
-  arrowFeatures.classList.toggle("arrow-features-active");
+  if (document.body.clientWidth < 1080) {
+    featuresTabs.classList.toggle("features-tabs-open");
+    arrowFeatures.classList.toggle("arrow-features-active");
+  } else {
+    document
+      .querySelector(".features-tabs-drop")
+      .classList.toggle("features-tabs-drop-active");
+    arrowFeatures.classList.toggle("arrow-features-active");
+  }
 }
 
 features.addEventListener("click", openFeatures);
 
 function openCompany() {
-  companyTabs.classList.toggle("company-tabs-open");
-  arrowCompany.classList.toggle("arrow-company-active");
+  if (document.width < 1080) {
+    companyTabs.classList.toggle("company-tabs-open");
+    arrowCompany.classList.toggle("arrow-company-active");
+  } else {
+    document
+      .querySelector(".company-tabs-drop")
+      .classList.toggle("company-tabs-drop-active");
+    arrowCompany.classList.toggle("arrow-company-active");
+  }
 }
 
 company.addEventListener("click", openCompany);

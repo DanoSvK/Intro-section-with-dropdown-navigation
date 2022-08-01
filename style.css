@@ -8,9 +8,9 @@ h1 {
   color: var(--header-font-color);
   font-size: 2.25rem;
   line-height: 2.625rem;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.0313rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -26,8 +26,8 @@ body {
   font-family: "Epilogue", "San-serif";
   width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -53,7 +53,6 @@ img {
 
 /* Main */
 /*Making background image responsive inside empty div */
-
 .overlay-active {
   position: fixed;
   width: 100vw;
@@ -93,7 +92,7 @@ img {
 }
 
 .column {
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 li {
@@ -101,6 +100,13 @@ li {
 }
 
 /* Menu */
+/* Removing desktop view menu from mobile view */
+.features-tabs-drop,
+.company-tabs-drop {
+  display: none;
+}
+
+/* Mobile view menu */
 .menu {
   background-color: #ffffff;
   position: absolute;
@@ -181,13 +187,13 @@ ul img {
 
 .features-tabs-open {
   overflow-y: hidden;
-  max-height: 192px;
+  max-height: 12rem;
   transition: all 0.5s ease-in-out;
 }
 
 .company-tabs-open {
   overflow-y: hidden;
-  max-height: 150px;
+  max-height: 9.375rem;
   transition: all 0.5s ease-in-out;
 }
 
@@ -207,9 +213,11 @@ ul img {
 /* Styling login and register buttons */
 .form {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
-.form {
+.login {
+  display: block;
   padding-bottom: 1rem;
 }
 
@@ -217,4 +225,231 @@ ul img {
   padding: 0.8125rem 2.625rem;
   border: 1px solid #686868;
   border-radius: 0.9375rem;
+}
+
+/* Making mobile view menu smaller for tablets */
+@media (min-width: 550px) {
+  .menu {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1080px) {
+  /* Global styling */
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 2.5rem 2rem 6.5625rem 2rem;
+  }
+
+  /* Removing overlay in case of resizing after opening menu in mobile view */
+  .overlay {
+    display: none;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -0.0694rem;
+    text-align: left;
+    max-width: 33.75rem;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  /* Desktop dropdown menu */
+  .features-tabs-drop {
+    overflow-y: hidden;
+    height: 0;
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    top: 3.4375rem;
+    left: 8.9063rem;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.149126);
+    border-radius: 0.625rem;
+  }
+  .features-tabs-drop-active {
+    height: 10.625rem;
+    overflow-y: hidden;
+    transition: all 0.5s ease-in-out;
+    padding: 1.5rem;
+  }
+
+  .company-tabs-drop {
+    overflow-y: hidden;
+    height: 0;
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    top: 3.4375rem;
+    left: 20.625rem;
+    transition: all 0.5s ease-in-out;
+    padding-left: 0;
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.149126);
+    border-radius: 0.625rem;
+  }
+  .features-tabs-drop li:last-child {
+    padding-bottom: 0;
+  }
+  .company-tabs-drop-active {
+    height: 8rem;
+    overflow-y: hidden;
+    transition: all 0.5s ease-in-out;
+    padding: 1.5rem;
+  }
+
+  .features-tabs-drop,
+  .company-tabs-drop {
+    gap: 0.3125rem;
+  }
+
+  .features-tabs-drop li,
+  .company-tabs-drop li {
+    display: flex;
+    gap: 0.9375rem;
+  }
+
+  .features-tabs-drop a,
+  .company-tabs-drop a {
+    text-decoration: none;
+    color: var(--main-font-color);
+  }
+
+  .careers {
+    padding-top: 2px;
+  }
+
+  .about {
+    padding-top: 2px;
+  }
+
+  /* Styling side menu as desktop menu column navigation */
+  .menu {
+    top: 0;
+    left: 9.375rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 85%;
+    padding-top: 1.375rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .features,
+  .company {
+    display: inline-block;
+    max-width: 100px;
+  }
+
+  /* Removing open and close mobile view menu buttons */
+  .close,
+  .open {
+    display: none;
+  }
+
+  /*Breaking heading after word 'Make' */
+  span {
+    display: inline-block;
+  }
+
+  /* Creating grid for text and image */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    padding-left: 10.3125rem;
+    padding-right: 8.125rem;
+    gap: 7.8125rem;
+  }
+
+  .background-image {
+    display: grid;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    order: 2;
+    background-image: url(/images//image-hero-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 460px;
+    height: 640px;
+    margin-bottom: 3.125rem;
+  }
+
+  .text {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  /* Styling text part and form */
+  .info {
+    max-width: 10.1875rem;
+    padding: 0 1.75rem;
+    margin-bottom: 3rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .info:hover {
+    color: var(--header-font-color);
+    background-color: #ffffff;
+    border: 1px solid var(--header-font-color);
+    border-radius: 15px;
+  }
+
+  .form {
+    padding-top: 1rem;
+  }
+
+  .login {
+    display: inline;
+    padding-left: 2.5rem;
+    padding-top: 2px;
+  }
+
+  .register {
+    border: 0;
+    padding: 0.8125rem 23px;
+    margin-left: 2.5rem;
+    border: 1.5px solid var(--main-font-color);
+    border-radius: 0.875rem;
+    color: var(--main-font-color);
+  }
+
+  .register:hover {
+    border: 1.5px solid var(--header-font-color);
+    color: var(--header-font-color);
+  }
+}
+
+@media (min-width: 1508px) {
+  .background-image {
+    margin-top: -80px;
+  }
 }
