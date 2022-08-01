@@ -53,7 +53,7 @@ function openFeatures() {
 features.addEventListener("click", openFeatures);
 
 function openCompany() {
-  if (document.width < 1080) {
+  if (document.body.clientWidth < 1080) {
     companyTabs.classList.toggle("company-tabs-open");
     arrowCompany.classList.toggle("arrow-company-active");
   } else {

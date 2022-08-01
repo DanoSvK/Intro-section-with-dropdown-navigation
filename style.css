@@ -28,7 +28,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FAFAFA
+  background-color: #fafafa;
 }
 
 *,
@@ -53,7 +53,7 @@ img {
 }
 
 /* Main */
-/*Making background image responsive inside empty div */
+/* Creating overlay */
 .overlay-active {
   position: fixed;
   width: 100vw;
@@ -61,6 +61,7 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*Making background image responsive inside empty div */
 .background-image {
   background-image: url(./images/image-hero-mobile.png);
   background-size: 100%;
@@ -69,6 +70,7 @@ img {
   height: 0;
 }
 
+/* Styling text section */
 .text {
   text-align: center;
   padding: 1rem;
@@ -346,7 +348,7 @@ ul img {
     height: auto;
     width: 85%;
     padding-top: 1.375rem;
-    background-color: #FAFAFA
+    background-color: #fafafa;
   }
 
   nav {
@@ -354,7 +356,7 @@ ul img {
     justify-content: space-between;
     width: 100%;
     padding: 0;
-    background-color: #FAFAFA
+    background-color: #fafafa;
   }
 
   ul {
