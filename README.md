@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View codes](https://github.com/DanoSvK/Intro-section-with-dropdown-navigation)
-- Live Site URL: [View Live site]()
+- Live Site URL: [View Live site](https://danosvk.github.io/Intro-section-with-dropdown-navigation/)
 
 ## My process
 
